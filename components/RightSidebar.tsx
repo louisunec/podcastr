@@ -18,8 +18,6 @@ const RightSidebar = () => {
   const router = useRouter();
   const topPodcasters = useQuery(api.users.getTopUserByPodcastCount) ?? [];
 
-  if(!topPodcasters) return <LoaderSpinner />
-
   const { audio } = useAudio()
 
   return (
